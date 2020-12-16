@@ -11,7 +11,10 @@ My project involved the creation of a site whereby users can explore auto insura
 
 ## Project Steps:
 
-Project work included the creation of a PostGres SQL database table from the kaggle .csv file. Incorporated Python Flask to create an API from the .csv data. Next, JS tool (TBD) was utilized to query the API.
+- Creation of a PostGres SQL database table built from the kaggle .csv file
+- Incorporated Python Flask to create API from the .csv data
+- JS tool (TBD) was utilized to develop tool front end, therby allowing for the query of API data
+-
 
 ## Conclusions and Learnings:
 
