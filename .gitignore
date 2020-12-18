@@ -6,6 +6,7 @@
 api_keys.py
 config.py
 config.js
+reference_material
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
