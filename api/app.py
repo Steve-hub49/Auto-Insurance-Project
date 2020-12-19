@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello all! This is Steve Freeland's flask for Project 2"
+    return "Hello all! This is Steve Freeland's flask for Project 2 - It is Saturday"
 
 if __name__ == '__main__':
-    app.run()
+    app.run() 
