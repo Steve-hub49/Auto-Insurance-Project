@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Dashboard</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/assets.css') }}"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div id="stockInputForm">
+            <label for="ticker">Stock Ticker Index</label>
+            <input name="ticker" id="tickerInput" type="text" default="Ticker" value="AAPL">
+            <label for="period">Period: </label>
+            
+        </div>
+
+        <button class="btn btn-dark" onclick="stockButtonOn()">
+            Build
+        </button>
+
+
+        </div>
+      </nav>
+    <div class="container chart-container">
+        <div class="row">
+            <div class="col-md-9">
+                
+                <canvas id="myChart" name="chartTest"> 
+                </canvas>
+
+                <div class="radioIntervalChar d-flex justify-content-center">
+                </div>
+            </div>
+            <div class="col-md-3 info-background">
+                <div class="info-head">
+                </div>
+                <div class="container info-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 mostActive">
+                <h6>Most Active Stocks Today</h6>
+            </div>
+        </div>
+    </div>
+    <footer class="foot">
+
+    </footer>
+    
+
+    <!-- D3 and Moment Scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.3.1/d3.min.js"></script>
+    <!-- moment is date adapter used by chart js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <!-- Application Script -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/second_app.js') }}"></script> -->
+    <script type="text/javascript" src="../static/js/app.js"></script>
+
+
+    <!-- Charts JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>  <!-- Zooming plugin for chart -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+    <!-- BootStrap Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
