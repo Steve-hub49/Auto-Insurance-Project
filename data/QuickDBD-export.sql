@@ -5,7 +5,7 @@
 CREATE TABLE Auto_Insurance (
     months_as_customer INT   NOT NULL,
     age INT   NOT NULL,
-    policy_number INT   NOT NULL,
+    policy_number INT PK   NOT NULL,
     policy_bind_date DATE   NOT NULL,
     policy_state VARCHAR   NOT NULL,
     policy_csl VARCHAR   NOT NULL,
