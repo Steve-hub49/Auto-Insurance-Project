@@ -29,8 +29,16 @@ session = Session(engine)
 app = Flask (__name__)
 
 # Flask Routes
-# Depricated
-@app.route("/education")
+@app.route("/")
+def welcome():
+    return (
+        f"Welcome to the Auto Insurance Data API!<br/>"
+        f"Available Routes:<br/>"
+        f"/education"
+    )
+
+
+@app.route("/education")    # Depricated
 def education():
     """Return counts of education level as json"""
     result = session.query(
@@ -47,13 +55,13 @@ def education():
     return jsonify(results)
 
 
-@app.route("/")
-def welcome():
-    return (
-        f"Welcome to the Auto Insurance Data API!<br/>"
-        f"Available Routes:<br/>"
-        f"/education"
-    )
+@app.route("/insured_education_level")    
+def insured_education_level():
+    """Return the insured_education_level column as json"""
+    result = session.query(
+        AutoInsurance.insured_education_level,
+         ).all()
+    return jsonify(result)
 
 
 if __name__ == '__main__':
