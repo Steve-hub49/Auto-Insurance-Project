@@ -35,6 +35,7 @@ def welcome():
         f"Welcome to the Auto Insurance Data API!<br/>"
         f"Available Routes:<br/>"
         f"/education"
+        f"/insured_education_level"
     )
 
 
