@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Dashboard</title>
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/assets.css') }}"> -->
+    <title>Auto Insurance Data Dashboard</title>
+    <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
 </head>
 <body >
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div id="stockInputForm">
-            <label for="ticker">Stock Ticker Index</label>
-            <input name="ticker" id="tickerInput" type="text" default="Ticker" value="AAPL">
-            <label for="period">Period: </label>
+        <div id="insuranceDataInputForm">
+            <label for="policydata" class="inputText">Policyholder Data Selection </label>
+            <input name="datapoint" id="datapointInput" type="text" default="Data Selection" value="Education Level">
+            <!-- <label for="period">Period: </label>  Not sure I need this? -->
             
         </div>
 
-        <button class="btn btn-dark" onclick="stockButtonOn()">
+        <button class="btn btn-dark" onclick="selectorButtonOn()">
             Build
         </button>
 
@@ -47,7 +47,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 mostActive">
-                <h6>Most Active Stocks Today</h6>
+                <h6>Policyholder Education Level Achieved</h6>
             </div>
         </div>
     </div>
