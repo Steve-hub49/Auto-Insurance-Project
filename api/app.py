@@ -9,7 +9,7 @@ from flask import Flask, jsonify, render_template
 
 # Database Setup
 engine = create_engine(f'postgres://postgres:slfpostgres2435!@localhost:5432/auto_ins_test')
-
+# I need to hide my password but need assistance here
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables

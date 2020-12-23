@@ -38,14 +38,15 @@ d3.json("http://localhost:5000/education").then(function(response){
         options:{
             tooltips: {
                 callbacks: {
+                    title: function([tooltipItem], data){
+                        console.log(data)
+                        var education = data.labels[tooltipItem.index]
+                        return education;
+                    },
                     label: function(tooltipItem, data) {
-                        var label = data.datasets[tooltipItem.index].label || '';
-                        console.log(tooltipItem)
-                        if (label) {
-                            label += ': ';
-                        }
-                        label += Math.round(tooltipItem.yLabel * 100) / 100;
-                        return label;
+                        var value = data.datasets[0].data[tooltipItem.index]
+                        var title = `${value}`
+                        return title;
                     }
                 }  
             }
