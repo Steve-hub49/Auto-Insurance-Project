@@ -34,8 +34,24 @@ d3.json("http://localhost:5000/education").then(function(response){
                 ],
                 borderWidth: 1
             }]
-        }})
+        },
+        options:{
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var label = data.datasets[tooltipItem.index].label || '';
+                        console.log(tooltipItem)
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                        return label;
+                    }
+                }  
+            }
+        }
 
+    })
 
 
 }).catch(function(error){if (error)throw error})
