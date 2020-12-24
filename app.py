@@ -31,12 +31,7 @@ app = Flask (__name__)
 # Flask Routes
 @app.route("/")
 def welcome():
-    return (
-        f"Welcome to the Auto Insurance Data API!<br/>"
-        f"Available Routes:<br/>"
-        f"/education"
-        f"/insured_education_level"
-    )
+    return render_template("index.html")
 
 
 @app.route("/education")    # Depricated
