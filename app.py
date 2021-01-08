@@ -3,19 +3,15 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-
 from config import USERNAME, PASSWORD, HOST, PORT, DB 
 
 
 # Database Setup
 conn_str = f'postgres://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DB}'
 engine = create_engine(conn_str)
-# reflect an existing database into a new model
+# automatically detect tables
 Base = automap_base()
-# reflect the tables
 Base.prepare(engine, reflect=True)
-
-# Test tables in db
 print(Base.classes.keys())
 
 # # Save reference to the table
