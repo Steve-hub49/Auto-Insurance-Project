@@ -24,7 +24,6 @@ print(Base.classes.keys())
 # # Create session
 # session = Session(engine)
 
-
 # # Flask Setup
 # app = Flask(__name__)
 

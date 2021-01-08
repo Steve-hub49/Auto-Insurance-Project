@@ -13,3 +13,4 @@ engine = create_engine(conn_str)
 conn = engine.connect()
 
 df.to_sql(TABLE_NAME, engine, if_exists='replace') 
+engine.execute(f'ALTER TABLE {TABLE_NAME} ADD PRIMARY KEY (policy_number);')
