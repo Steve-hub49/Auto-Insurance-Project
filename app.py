@@ -15,7 +15,7 @@ Base.prepare(engine, reflect=True)
 print(Base.classes.keys())
 
 # # Save reference to the table
-# AutoInsurance = Base.classes[TABLE_NAME]
+# InsuranceClaims = Base.classes[TABLE_NAME]
 
 # # Create session
 # session = Session(engine)

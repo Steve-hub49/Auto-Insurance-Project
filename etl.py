@@ -4,7 +4,6 @@ from sqlalchemy import create_engine
 from config import USERNAME, PASSWORD, HOST, PORT, DB, TABLE_NAME
 
 
-TABLE_NAME = 'insurance_claims'
 df = pd.read_csv('insurance_claims.csv')
 
 # create an engine that can talk to the database
