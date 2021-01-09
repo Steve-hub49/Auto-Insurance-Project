@@ -1,8 +1,13 @@
+import os
 import pandas as pd
 from sqlalchemy import create_engine
 
-from config import USERNAME, PASSWORD, HOST, PORT, DB, TABLE_NAME
-
+USERNAME = os.environ['PG_USERNAME']
+PASSWORD = os.environ['PG_PASSWORD']
+HOST = os.environ['HOST']
+PORT = os.environ['PORT']
+DB = os.environ['DB']
+TABLE_NAME = os.environ['TABLE_NAME']
 
 df = pd.read_csv('insurance_claims.csv')
 

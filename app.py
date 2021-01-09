@@ -3,7 +3,13 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from config import USERNAME, PASSWORD, HOST, PORT, DB, TABLE_NAME
+# from config import USERNAME, PASSWORD, HOST, PORT, DB, TABLE_NAME
+USERNAME = os.environ['PG_USERNAME']
+PASSWORD = os.environ['PG_PASSWORD']
+HOST = os.environ['HOST']
+PORT = os.environ['PORT']
+DB = os.environ['DB']
+TABLE_NAME = os.environ['TABLE_NAME']
 
 
 # Database Setup
