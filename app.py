@@ -3,7 +3,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from config import USERNAME, PASSWORD, HOST, PORT, DB 
+from config import USERNAME, PASSWORD, HOST, PORT, DB, TABLE_NAME
 
 
 # Database Setup
@@ -15,7 +15,7 @@ Base.prepare(engine, reflect=True)
 print(Base.classes.keys())
 
 # # Save reference to the table
-# AutoInsurance = Base.classes.auto_ins
+# AutoInsurance = Base.classes[TABLE_NAME]
 
 # # Create session
 # session = Session(engine)
@@ -33,9 +33,9 @@ print(Base.classes.keys())
 # def education():
 #     """Return counts of education level as json"""
 #     result = session.query(
-#         AutoInsurance.insured_education_level,
-#         func.count(AutoInsurance.insured_education_level)
-#         ).group_by(AutoInsurance.insured_education_level).all()
+#         InsuranceClaims.insured_education_level,
+#         func.count(InsuranceClaims.insured_education_level)
+#         ).group_by(InsuranceClaims.insured_education_level).all()
 #     results = []
 #     for policy_holder, n in result:
 #         temp = {}
@@ -50,7 +50,7 @@ print(Base.classes.keys())
 # def insured_education_level():
 #     """Return the insured_education_level column as json"""
 #     result = session.query(
-#         AutoInsurance.insured_education_level,
+#         InsuranceClaims.insured_education_level,
 #          ).all()
 #     return jsonify(result)
 

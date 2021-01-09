@@ -1,7 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 
-from config import USERNAME, PASSWORD, HOST, PORT, DB 
+from config import USERNAME, PASSWORD, HOST, PORT, DB, TABLE_NAME
 
 
 TABLE_NAME = 'insurance_claims'
