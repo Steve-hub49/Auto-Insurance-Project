@@ -5,17 +5,12 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
 # from config import USERNAME, PASSWORD, HOST, PORT, DB, TABLE_NAME
-USERNAME = os.environ['PG_USERNAME']
-PASSWORD = os.environ['PG_PASSWORD']
-HOST = os.environ['HOST']
-PORT = os.environ['PORT']
-DB = os.environ['DB']
+DATABASE_URL = os.environ['DATABASE_URL']
 TABLE_NAME = os.environ['TABLE_NAME']
 
 
 # Database Setup
-conn_str = f'postgres://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DB}'
-engine = create_engine(conn_str)
+engine = create_engine(DATABASE_URL)
 # automatically detect tables
 Base = automap_base()
 Base.prepare(engine, reflect=True)

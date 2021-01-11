@@ -2,18 +2,13 @@ import os
 import pandas as pd
 from sqlalchemy import create_engine
 
-USERNAME = os.environ['PG_USERNAME']
-PASSWORD = os.environ['PG_PASSWORD']
-HOST = os.environ['HOST']
-PORT = os.environ['PORT']
-DB = os.environ['DB']
+DATABASE_URL = os.environ['DATABASE_URL']
 TABLE_NAME = os.environ['TABLE_NAME']
 
 df = pd.read_csv('insurance_claims.csv')
 
 # create an engine that can talk to the database
-conn_str = f'postgres://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DB}'
-engine = create_engine(conn_str)
+engine = create_engine(DATABASE_URL)
 conn = engine.connect()
 
 df.to_sql(TABLE_NAME, engine, if_exists='replace') 
