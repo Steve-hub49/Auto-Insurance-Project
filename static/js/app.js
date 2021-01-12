@@ -1,5 +1,5 @@
 console.log("test")
-d3.json("/education").then(function(response){
+d3.json("./education").then(function(response){
     console.log(response)
     policy_holder_array = response.map(function(element){return element.policy_holder})
     console.log(policy_holder_array)
