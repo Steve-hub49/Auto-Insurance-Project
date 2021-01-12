@@ -2,7 +2,7 @@
 
 This is the repository for Project 2 / Auto Insurance Project (Steve Freeland).
 
-My project involved the creation of a site whereby users can explore auto insurance data based on vehicle and zip code input criteria.
+My project involved the creation of a site whereby users can explore auto insurance data based on select endpoints (i.e., policyholder education level).
 
 ## Data:
 
